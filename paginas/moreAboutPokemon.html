@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <!--Font Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--Normalize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Nosso CSS-->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/pokeAbout.css">
+</head>
+
+<body>
+        
+        <section>
+            <header class="informationNav">
+                <nav class="menuReturnFavorite">
+                    <img class="returnArrow" onclick="returnArrow()" src="../assets/images/return arrow.png" alt="return arrow">
+                    <img class="favorite" src="../assets/images/favorite.png" alt="favorite">
+                </nav>
+                <div class="basicDetails">
+                    <span class="name" id="namePoke"></span>
+                    <span class="id" id="idPokemon"></span>
+                    <div class="types">
+                        <ol id="typesPokemon">
+                            <li class="type"></li>
+                            <li class="type"></li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="imagesHeader">
+                    <img class="fundoPoke" src="../assets/images/pokebola.png" alt="pokebola meio transparente">
+                </div>
+            </header>
+        </section>
+        <section class="pokeStats">
+            <nav>
+                <ol>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Base Stats</a>
+                    </li>
+                    <li>
+                        <a href="#">Evolution</a>
+                    </li>
+                    <li>
+                        <a href="#">Moves</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="line"></div>
+                <div class="allDetail">
+                    <table class="pokemonReport">
+                    <thead class="pokeStatsConjunto">
+                        <tr>
+                            <td class="labelDetail">Species</td>
+                            <td class="InfoDetail" id="infoSpecies"></td>
+                        </tr>
+                        <tr>
+                            <td class="labelDetail">Height</td>
+                            <td class="InfoDetail" id="infoHeight"></td>
+                        </tr>
+                        <tr>
+                            <td class="labelDetail">Weight</td>
+                            <td class="InfoDetail" id="infoWeight"></td>
+                        </tr>
+                        <tr>
+                            <td class="labelDetail">Abilities</td>
+                            <td class="InfoDetail Abilities" id="infoAbilities">
+                               
+                            </td>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td class="title">Breeding</td>
+                        </tr>
+                    </tbody>
+                    <tfooter class="pokeStatsConjunto">
+                        <tr>
+                            <td class="labelDetail">Gender</td>
+                            <td class="InfoDetail gender">
+                                <span class="male">
+                                    <img src="../assets/images/male.png" alt="">
+                                    <span id="infoGenderMale"></span>
+                                </span>
+                                <span class="female">
+                                    <img src="../assets/images/female.png" alt="">
+                                    <span id="infoGenderFemale"></span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelDetail">Egg Groups</td>
+                            <td class="InfoDetail" id="infoEggGroups">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelDetail">Hatch Counter</td>
+                            <td class="InfoDetail" id="InfoHatchCounter"></td>
+                        </tr>
+                    </tfooter>
+                    </table>
+                </div>
+                
+        </section>
+   
+
+    <!--Nosso Js-->
+    <script src="/assets/js/pagination.js"></script>
+    <script src="../assets/js/poke-about-api.js"></script>
+    <script src="../assets/js/main-about-pokemon.js"></script>
+</body>
+</html>

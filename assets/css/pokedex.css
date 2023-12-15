@@ -11,19 +11,19 @@
 }
 
 .grass {
-    background-color: #77c850;
+    background-color: #49ceae;
 }
 
 .fire {
-    background-color: #ee7f30;
+    background-color: #fa6d6c;
 }
 
 .water {
-    background-color: #678fee;
+    background-color: #76befe;
 }
 
 .electric {
-    background-color: #f7cf2e;
+    background-color: #ffce4b;
 }
 
 .ice {
@@ -84,6 +84,14 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+
+    transition: scale 0.2s, opacity 0.2s;
+}
+
+.pokemon:hover{
+    scale: 0.95;
+    opacity: 85%;
+    cursor: pointer;
 }
 
 .pokemon .number {

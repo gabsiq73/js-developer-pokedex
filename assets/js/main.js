@@ -2,13 +2,26 @@ const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
 const maxRecords = 151
-const limit = 10
+const limit = 10;
 let offset = 0;
+
+function convertIdPokemon(pokemon){
+    const number = pokemon.number
+    if(number <= 9){
+        return '000'
+    } else if(number <= 99){
+        return '00'
+    } else if(number <= 999){
+        return '0'
+    } else{
+        return ''
+    }
+}
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
+        <li onclick="pagination(${pokemon.number - 1})" class="pokemon ${pokemon.type}">
+            <span class="number">#${convertIdPokemon(pokemon)}${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
             <div class="detail">
@@ -16,7 +29,7 @@ function convertPokemonToLi(pokemon) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-                <img src="${pokemon.photo}"
+                <img class="pokeImgList" src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
         </li>
